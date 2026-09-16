@@ -1,0 +1,319 @@
+var _DealerNotices = function()
+{
+	var self = this;
+
+	this.xmlPath = '/ajax/dealer_notices/';
+
+	this.formName = 'dealerNoticeForm';
+	this.form = null;
+
+	this.goldYear = 0;
+	this.maxBonus = 0;
+	this.currentBonus = 0;
+	this.noticeText = '';
+	this.noticeTitle = '';
+	this.noticeId = 0;
+	this.noticeImage = '';
+
+
+	this.historyContainer = null;
+	this.MessageParamsH = ['text', 'date', 'caption', 'topic', 'readed', 'id',
+		'h_name1', 'h_id1', 'c_id1', 'h_level1', 'h_name2', 'h_id2', 'c_id2', 'h_level2'];
+
+
+	this.processResponse = function(xmldoc)
+	{
+		var
+			rootElement = xmldoc.getElementsByTagName("response").item(0);
+
+		if (rootElement == null)
+		{
+			core.alertError('Неверный ответ от сервера.');
+			return false;
+		}
+
+		var msg = $('message', xmldoc);
+		if (msg.length)
+		{
+			top.core.alertMsg(msg.text());
+		}
+
+		var error = $('error', xmldoc);
+		if (error.length)
+		{
+			top.core.alertError(error.text());
+		}
+
+		var act = $('act', xmldoc).text();
+
+		switch (act)
+		{
+			case 'get_data':
+
+				var params = $('params', xmldoc);
+
+				self.goldYear = parseInt(params.attr('money_year'));
+				self.maxBonus = parseInt(params.attr('money_max'));
+				self.currentBonus = parseInt(params.attr('money_current'));
+
+				self.formUpdateContent();
+				self.form.show();
+
+				break;
+
+			case 'closeNotice':
+				self.hideForm();
+				break;
+
+			case 'sendMessage':
+				if (!error.length)
+				{
+					self.hideForm();
+				}
+
+				break;
+
+			case 'getHistory':
+                self.Page 	= parseInt($("page", xmldoc).text());
+                self.PageCount = parseInt($("page_count", xmldoc).text());
+
+				var MessageXML = $("messages", xmldoc);
+				var Messages = [];
+
+				$("topic_message", MessageXML).each(
+					function()
+					{
+						var CurMessage = $(this);
+
+						var NewMessage = [];
+
+						for (var i = 0; i < self.MessageParamsH.length; i++)
+							NewMessage[self.MessageParamsH[i]]    = $(self.MessageParamsH[i], CurMessage).text();
+
+						Messages.push(NewMessage);
+					}
+				);
+
+				self.PrintTopicHistory(Messages, '');
+
+				break;
+		}//
+	};
+
+	this.xmlSend = function(path, xml)
+	{
+		top.core.xmlSend(path, xml, self.processResponse);
+	};
+
+	this.showForm = function(menuItem)
+	{
+		if (!this.form)
+			this.form = $('#' + this.formName);
+
+		if (!this.form.length)
+			this.createForm();
+
+
+		this.form.show();
+		//this.xmlSend(self.xmlPath + 'get_data', '');
+	};
+
+	this.hideForm = function()
+	{
+		if (this.form) {
+            this.form.hide();
+            top.core.hasDealerNotice = false;
+        }
+	};
+
+
+	this.createForm = function()
+	{
+		this.form = $('<div></div>').css({
+			'z-index': 	'999',
+			'width': 	'100%',
+			'height': '	100%',
+			'display': 	'none',
+			'position': 'absolute',
+			'left': 	'0px',
+			'top': 		'0px'
+		}).attr('id', this.formName);
+
+		this.formUpdateContent();
+
+		this.form.css('display', 'none');
+		this.form.appendTo($('body'));
+	};
+
+	this.formUpdateContent = function()
+	{
+		this.form.html(
+			'<div style="position: absolute; width: 100%; height: 100%;"><img src="' + top.core.imgPath + 'd3/nquest/1x1ser.png" width="100%" height="100%"></div>'+
+			'<div class="Message_bg textM">' +
+			'	<div class="Container">' +
+			'		<div id="dnMessageTextBox" style="display: none">' +
+			'			<table width="100%" cellpadding="0" cellspacing="3">' +
+			'			<tr><td><input type="radio" checked /> Сообщение консультанту</td></tr>' +
+			'			<tr><td>Тема: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" disabled value="' + this.noticeTitle + '" class="butt1" style="width: 560px; float: right"/></td></tr>' +
+			'			<tr><td><textarea id="dnMessageText"></textarea></td></tr>' +
+			'			<tr><td align="center"><br /><input type="button" value="Отправить" style="width: 120px" class="butt1" id="dnSendButton"></td></tr>' +
+			'			</table>' +
+			'		</div>'+
+			'    	<div class="PromoImage">' +
+			'        	<img src="' + this.noticeImage + '" width="640" height="290" />' +
+			'        </div>' +
+			'        <div class="Title" align="center">' +
+			'        	<strong>' + this.noticeTitle + '</strong>' +
+			'       </div>' +
+			'		<div id="dnText">' +
+		       		 this.noticeText +
+			'       </div>' +
+			'		<div class="Bottom" align="center">' +
+			'        	<a href="#" id="dnExitButton"><img src="' + top.core.imgPath + 'd2012/Close_M.png" width="103" height="38" /></a><a href="#" id="dnMessageButton"><img src="' + top.core.imgPath + 'd2012/Question_M.png" width="142" height="38" /></a>' +
+			'        </div>' +
+		    '		 </div>' +
+			'</div>');
+
+		$('#wpCloseButton', this.form).click(function(){ self.hideForm()});
+		$('#dnExitButton', this.form).click(function(){ self.onExitClick()});
+		$('#dnMessageButton', this.form).click(function(){ self.onMessageClick()});
+		$('#dnSendButton', this.form).click(function(){ self.onMessageSendClick()});
+	};
+
+	this.onExitClick = function()
+	{
+		this.xmlSend(
+			self.xmlPath,
+			'<request act="closeNotice"><id>' + this.noticeId + '</id></request>'
+		);
+	};
+
+	this.onMessageClick = function()
+	{
+		$('.PromoImage', this.form).hide();
+		$('#dnMessageTextBox', this.form).show();
+	};
+
+	this.onMessageSendClick = function()
+	{
+		var text = $('#dnMessageText', this.form).val();
+
+		if (text.lenght < 5)
+		{
+			top.core.alertError('Слишком короткое сообщение.');
+			return;
+		}
+
+		this.xmlSend(
+			self.xmlPath,
+			'<request act="sendMessage">' +
+				'<id>' + this.noticeId + '</id>' +
+				'<text><![CDATA[' + text + ']]></text>' +
+			'</request>'
+		);
+	};
+
+	this.getHistory = function(topicId, historyContainer, page)
+	{
+        if (!page) {
+            page = 1;
+        }
+
+		if (historyContainer)
+			this.historyContainer = historyContainer;
+
+		this.xmlSend(
+			self.xmlPath,
+			'<request act="getHistory"><topic>' + topicId + '</topic><page>' + page + '</page></request>'
+		);
+	};
+
+    this.GenPages = function (funct_s, funct_e)
+    {
+        if (this.PageCount == 1) return '&nbsp';
+
+        var HTML = '<span align="center">Страницы: ';
+
+        if (this.Page > 3) HTML += '<a href="JavaScript:'+funct_s+'1'+funct_e+'">&lsaquo;&lsaquo;</a> ';
+
+        for (var i = Math.max(this.Page - 3, 0); i < Math.min(this.Page + 2, this.PageCount); i++)
+        {
+            if (i+1 == this.Page)
+                HTML += '<span style="color:#0000CC"><b>'+(i+1)+'</b></span> ';
+            else HTML += '<a href="JavaScript:'+funct_s+(i+1)+funct_e+'">'+(i+1)+'</a> ';
+        }
+
+        if (this.Page < this.PageCount-2) HTML += '<a href="JavaScript:'+funct_s+(this.PageCount)+funct_e+'">&rsaquo;&rsaquo;</a>';
+
+        HTML += '</span>';
+
+        return HTML;
+    }
+
+	this.PrintTopicHistory = function(Messages)
+	{
+		var HTML = '';
+
+		if (!self.historyContainer) return;
+
+		if (Messages.length == 0)
+		{
+			HTML = '<b>История сообщений пуста</b>';
+		}
+		else
+		{
+			var TopicID = (parseInt(Messages[0]['topic']) ? Messages[0]['topic'] : Messages[0]['id']);
+
+			for (var i = 0; i < Messages.length; i++)
+			{
+				HTML += '<table class="textM" width="100%" '+(parseInt(Messages[i]['h_id1']) == top.user.id ? 'style="background-color:#CCCCCC"' :  '')+'>' +
+						'<tr><td  align="left">От: ' + top.genUsrInfStr(Messages[i]['h_name1'], Messages[i]['h_id1'], Messages[i]['h_level1'], Messages[i]['c_id1']) +'</td><td align="right" width="110px">'+Messages[i]['date']+'</td></tr>'+'</td></tr>'+
+						'<tr><td valign="top"  align="left">Тема: ' +(Messages[i]['caption'] ? Messages[i]['caption'] : '&nbsp')+'</td>' +
+							'<td align="right" rowspan="2"><i><a href="JavaScript:" >Удалить</a></i></td></tr>'+
+						'<tr><td valign="top"  align="left">' +Messages[i]['text']+'</td></tr>'+
+						'<tr><td colspan="2" align="center"><hr/></td></tr>' +
+						'</table>' +
+						'';
+			}
+
+			var Pages = this.GenPages('getHistory('+TopicID+', ', ')');
+			HTML += '<div align="right">'+Pages+'</div>';
+		}
+
+	//	var Div = $('#'+DivName, $(this.ParentElement));
+		var Div = self.historyContainer;
+
+
+
+		if (Div)
+		{
+			if (Div.is(":hidden"))
+			{
+	        	Div.html(HTML);
+	      //  	Div.show();
+	        	Div.slideDown(Messages.length*100);
+	      	}
+	      	else
+	      	{
+	     // 		Div.html(HTML);
+	      //		Div.show();
+
+
+	      		Div.slideUp(1*60, function () {
+        			Div.html(HTML);
+        			Div.slideDown(Messages.length*100); //, 'linear'
+	        	});
+
+
+	      	}
+      	}
+
+
+    //  	this.CurrentMessages = Messages.length;
+
+		//$('#'+DivName, $(this.ParentElement)).html(HTML);
+	};
+
+
+
+}
