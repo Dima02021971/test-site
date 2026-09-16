@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    
+            <link href="./_buildings.css" rel="stylesheet" type="text/css">
+            <link href="./_jeweler_workshop.css" rel="stylesheet" type="text/css">
+            <link href="./_guildhall.css" rel="stylesheet" type="text/css">
+                <script type="text/javascript" src="./saved_resource"></script>
+            <script type="text/javascript" src="./saved_resource(1)"></script>
+            <script type="text/javascript" src="./saved_resource(11)"></script>
+            <script type="text/javascript" src="./saved_resource(12)"></script>
+            <script type="text/javascript" src="./saved_resource(13)"></script>
+    </head>
+    <body scroll="no" marginwidth="0" marginheight="0" style="">
+        <div id="placeContainer">
+    <div class="buildingBase">
+        <div class="buildingBack"></div>
+        <img class="buildingBackImageLeft" src="./wnd_border_left.png">
+        <img class="buildingBackImageRight" src="./wnd_border_right.png">
+        <div class="buildingFront"></div>
+        <img class="buildingFrontImageLeft" src="./wnd_border_left.png">
+        <img class="buildingFrontImageRight" src="./wnd_border_right.png">
+        <div id="buildingMenu" class="buildingMenu textS">
+                    
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="hall">Администрация</a></div>
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="rating">Рейтинг</a></div>
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="quests" style="display: none;">Зал собраний</a></div>
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="guildShop" style="display: none;">Магазин</a></div>
+            <br>
+                    <div><a class="textS actionControl activeItem" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="workplace" style="display: inline;">Рабочий зал</a></div>
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="workers" style="display: inline;">Рабочие</a></div>
+            <br>
+                    <div><a class="textS actionControl" href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" data-action="guildhallPlace.changeTab" data-id="converter" style="display: inline;">Преобразователь</a></div>
+
+        </div>
+        <div class="buildingContent">
+            <div id="div_scroll" class="buildingScroll textM mCustomScrollbar _mCS_1" style="overflow: visible; height: 466px;"><div id="mCSB_1" class="mCustomScrollBox mCS-3d-ereality mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="buildingImage">
+                            <img style="float:left" src="./builtd_upper_border.png" width="544" height="20" class="mCS_img_loaded">
+                            <img style="display: inline;float: left;" src="./upper_border_2_1.png" width="20" height="245" class="mCS_img_loaded">
+                            <img style="display: inline;float: left;" src="./guild_priest.jpg" width="504" height="245" class="mCS_img_loaded">
+                            <img style="display: inline;float: left;" src="./upper_border_2_3.png" width="20" height="245" class="mCS_img_loaded">
+                            <img style="display: block;float: left;" src="./builtd_lower_border.png" width="544" height="20" class="mCS_img_loaded">
+                        </div>
+                <div align="center" style="padding:7px;background-color: #d7d7d7" id="div_bhtml">
+                            
+    <div id="guildhallPlace">
+        <div id="jewelerWorkshop">
+                    <div class="tab tab-hall" style="display: none;">
+    <div class="hall-join-container">
+    <div>Количество участников: 291</div>
+
+        <input type="button" style="margin-top: 3px;" class="invbutt actionControl" data-action="guildhallPlace.join" value="Вступить">
+
+</div>
+</div>
+                    <div class="tab tab-rating" style="display: none;"></div>
+                    <div class="tab tab-quests" style="display: none;"></div>
+                    <div class="tab tab-guildShop" style="display: none;"><div class="noItems"><b>Нет предметов для покупки</b></div><div class="itemDisplayDescription guildShopItem" data-id="20" style="max-width: 517px;"><div class="itemTitle"><b class="itemName" style="cursor: pointer;" onclick="top.chat.addTxt('Лицензия лаборатории Жрецов');">Лицензия лаборатории Жрецов</b><br>Цена: 1000 пиастров</div><div class="itemBody"><div class="itemBodyBlock itemBodyImage"><img class="itemImage" src="./pro_guild_license.png" alt=""></div><div class="itemBodyBlock itemBodyNeed"><b>Требования</b><br>Уровень: <b>15</b><br></div><div class="itemBodyBlock itemBodyAdd"><b>Описание</b><br>Действует: <b>7</b> д. <b>0</b> ч.<br><span style="color: #999999;">Разрешение на осуществление работы<br>Заменяет текущую</span></div><div class="itemBodyBlock itemBodyButtons"><div>Цена покупки:<br><b><span class="price">5</span></b> ед.<br>репутации<div>Кол-во: <input style="width:30px" value="1" data-count="-1" class="field itemCount" disabled="disabled"></div></div><input type="button" value="Купить" class="invbutt actionControl" style="margin-bottom: 2px;" data-action="guildhallPlace.buyGuildShopItem"></div></div></div><div class="itemDisplayDescription guildShopItem" data-id="2408" style="max-width: 517px;"><div class="itemTitle"><b class="itemName" style="cursor: pointer;" onclick="top.chat.addTxt('Полузвёздная мазь');">Полузвёздная мазь</b><br>Цена: 70 пиастров</div><div class="itemBody"><div class="itemBodyBlock itemBodyImage"><img class="itemImage" src="./salve1.png" alt=""><div style="line-height: 1px;"><div class="solidLine" style="width: 80px;"><img src="./nline.png" width="80" alt=""></div></div><div style="text-align: center;" class="textS">1/1</div></div><div class="itemBodyBlock itemBodyNeed"><b>Требования</b><br>Уровень: <b>15</b><br></div><div class="itemBodyBlock itemBodyAdd"><b>Описание</b><br>Годен: <b>30</b> д. <b>11</b> ч.<br>Действует: <b>1</b> ч. <b>0</b> мин.<br><span style="color: #999999;"></span></div><div class="itemBodyBlock itemBodyButtons"><div>Цена покупки:<br><b><span class="price">60</span></b> ед.<br>репутации<div>Кол-во: <input style="width:30px" value="1" data-count="-1" class="field itemCount"></div></div><input type="button" value="Купить" class="invbutt actionControl" style="margin-bottom: 2px;" data-action="guildhallPlace.buyGuildShopItem"></div></div></div><div class="itemDisplayDescription guildShopItem" data-id="2409" style="max-width: 517px;"><div class="itemTitle"><b class="itemName" style="cursor: pointer;" onclick="top.chat.addTxt('Звёздная мазь');">Звёздная мазь</b><br>Цена: 126 пиастров</div><div class="itemBody"><div class="itemBodyBlock itemBodyImage"><img class="itemImage" src="./salve2.png" alt=""><div style="line-height: 1px;"><div class="solidLine" style="width: 80px;"><img src="./nline.png" width="80" alt=""></div></div><div style="text-align: center;" class="textS">1/1</div></div><div class="itemBodyBlock itemBodyNeed"><b>Требования</b><br>Уровень: <b>15</b><br></div><div class="itemBodyBlock itemBodyAdd"><b>Описание</b><br>Годен: <b>30</b> д. <b>11</b> ч.<br>Действует: <b>2</b> ч. <b>0</b> мин.<br><span style="color: #999999;"></span></div><div class="itemBodyBlock itemBodyButtons"><div>Цена покупки:<br><b><span class="price">107</span></b> ед.<br>репутации<div>Кол-во: <input style="width:30px" value="1" data-count="-1" class="field itemCount"></div></div><input type="button" value="Купить" class="invbutt actionControl" style="margin-bottom: 2px;" data-action="guildhallPlace.buyGuildShopItem"></div></div></div><div class="itemDisplayDescription guildShopItem" data-id="2410" style="max-width: 517px;"><div class="itemTitle"><b class="itemName" style="cursor: pointer;" onclick="top.chat.addTxt('Двухзвёздная мазь');">Двухзвёздная мазь</b><br>Цена: 224 пиастров</div><div class="itemBody"><div class="itemBodyBlock itemBodyImage"><img class="itemImage" src="./salve4.png" alt=""><div style="line-height: 1px;"><div class="solidLine" style="width: 80px;"><img src="./nline.png" width="80" alt=""></div></div><div style="text-align: center;" class="textS">1/1</div></div><div class="itemBodyBlock itemBodyNeed"><b>Требования</b><br>Уровень: <b>15</b><br></div><div class="itemBodyBlock itemBodyAdd"><b>Описание</b><br>Годен: <b>30</b> д. <b>11</b> ч.<br>Действует: <b>4</b> ч. <b>0</b> мин.<br><span style="color: #999999;"></span></div><div class="itemBodyBlock itemBodyButtons"><div>Цена покупки:<br><b><span class="price">190</span></b> ед.<br>репутации<div>Кол-во: <input style="width:30px" value="1" data-count="-1" class="field itemCount"></div></div><input type="button" value="Купить" class="invbutt actionControl" style="margin-bottom: 2px;" data-action="guildhallPlace.buyGuildShopItem"></div></div></div><div class="itemDisplayDescription guildShopItem" data-id="2411" style="max-width: 517px;"><div class="itemTitle"><b class="itemName" style="cursor: pointer;" onclick="top.chat.addTxt('Трёхзвёздная мазь');">Трёхзвёздная мазь</b><br>Цена: 392 пиастров</div><div class="itemBody"><div class="itemBodyBlock itemBodyImage"><img class="itemImage" src="./salve8.png" alt=""><div style="line-height: 1px;"><div class="solidLine" style="width: 80px;"><img src="./nline.png" width="80" alt=""></div></div><div style="text-align: center;" class="textS">1/1</div></div><div class="itemBodyBlock itemBodyNeed"><b>Требования</b><br>Уровень: <b>15</b><br></div><div class="itemBodyBlock itemBodyAdd"><b>Описание</b><br>Годен: <b>30</b> д. <b>11</b> ч.<br>Действует: <b>8</b> ч. <b>0</b> мин.<br><span style="color: #999999;"></span></div><div class="itemBodyBlock itemBodyButtons"><div>Цена покупки:<br><b><span class="price">333</span></b> ед.<br>репутации<div>Кол-во: <input style="width:30px" value="1" data-count="-1" class="field itemCount"></div></div><input type="button" value="Купить" class="invbutt actionControl" style="margin-bottom: 2px;" data-action="guildhallPlace.buyGuildShopItem"></div></div></div></div>
+                    <div class="tab tab-workplace tab-craft" style="display: block;">
+    
+
+    <div class="craftItem itemDisplayDescription item228 itemType0" inwork="">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Вита-порошок стойкости');">Вита-порошок стойкости</b><br>
+            Время создания: <b>3</b> мин. <b>0</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>480 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./vita_ankr.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemProcess" style="text-align: center;">
+                <span id="spanTime"><b>0</b> мин. <b>51</b> сек.</span>
+                <br><input type="button" value="Прервать" class="actionControl invbutt" data-action="priest.stopWork" style="width: 65px;margin-top: 5px;">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item225 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Вита-порошок точности');">Вита-порошок точности</b><br>
+            Время создания: <b>3</b> мин. <b>0</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>480 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./vita_anuv.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ore30_1n.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Вардарит (руда)');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>40</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item226 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Вита-порошок уворота');">Вита-порошок уворота</b><br>
+            Время создания: <b>3</b> мин. <b>0</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>480 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./vita_uv.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./skin30_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Кожа Тирекса');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>1</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item227 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Вита-порошок сокрушения');">Вита-порошок сокрушения</b><br>
+            Время создания: <b>3</b> мин. <b>0</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>480 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./vita_kr.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>25</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item229 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Настойка на скорость');">Настойка на скорость</b><br>
+            Время создания: <b>3</b> мин. <b>50</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>640 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./infusion_speed.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./skin30_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Кожа Тирекса');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>2</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item230 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Настойка на скрытность');">Настойка на скрытность</b><br>
+            Время создания: <b>3</b> мин. <b>50</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>645 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./infusion_stealth.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./plank30_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Акарисовые доски');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>2</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item231 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Настойка на прочность');">Настойка на прочность</b><br>
+            Время создания: <b>3</b> мин. <b>50</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>590 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./infusion_durability.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./rem_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ремкомплект');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>5</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item232 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Эссенция жизни');">Эссенция жизни</b><br>
+            Время создания: <b>4</b> мин. <b>40</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>680 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./essence_hp.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./skin30_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Кожа Тирекса');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>1</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>15</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>10</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item233 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Эссенция опыта');">Эссенция опыта</b><br>
+            Время создания: <b>4</b> мин. <b>40</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>680 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./essence_exp.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./wood30_1.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Акарис');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>2</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>10</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>10</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item234 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Эссенция силы');">Эссенция силы</b><br>
+            Время создания: <b>4</b> мин. <b>40</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>680 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./essence_str.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ore30_1n.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Вардарит (руда)');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>48</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>10</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vitaliz-crystall.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Витализ');">
+                    <span style="font-weight: bold;color:green">30</span> из <b>10</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="craftItem itemDisplayDescription item235 itemType0 noResources">
+    <div class="itemTitle">
+        <div class="leftAlign">
+            <b style="cursor: pointer;" onclick="top.chat.addTxt('Пыльца обмена');">Пыльца обмена</b><br>
+            Время создания: <b>5</b> мин. <b>30</b> сек.
+        </div>
+        <div class="rightAlign" style="position: absolute;top: 0;right: 0;padding: 3px 5px;text-align: right;">
+            <div>1170 пс.</div>
+            <div>12 ОР&nbsp;</div>
+        </div>
+    </div>
+    <div class="itemBody" style="width: 500px;">
+        <div class="itemBodyBlock" style="width: 100px;height: 90px;text-align: center;vertical-align: middle;">
+            <img src="./exchange_dust.png" alt="" style="display: inline-block;vertical-align: middle;">
+        </div>
+        <div class="itemBodyBlock" style="vertical-align: middle;">
+            <div class="itemRecipe" style="text-align: right;">
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./ahura_root.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Ахура-корень');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>5</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./vardarite_ignot.png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Вардаритовый слиток');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>1</b>
+                </div>
+                <div class="component" style="display: inline-block;text-align: center;">
+                    <img class="mainTooltip" src="./essence_str(1).png" alt="" style="cursor: pointer;" onclick="top.chat.addTxt('Эссенция силы');">
+                    <span style="font-weight: bold;color:#BB6666">0</span> из <b>1</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+                    <div class="tab tab-workers" style="display: none;"><div class="workerOffers">
+    Ваш контракт с рабочими мастерской истекает через <b>4</b> д. <b>4</b> ч.
+</div><div class="workersList">
+    <div class="takeAllControl">
+        <input class="invbutt actionControl" type="button" value="Забрать все" data-action="workers.takeAllItems">
+    </div>
+    <div class="noItems">В очереди нет задач.</div>
+    <div class="itemDisplayDescription item1789551332">
+        <div class="itemTitle">20. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Выполняется работа:<br>
+                    <span id="workersTime"><b>1</b> мин. <b>34</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789551332">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789551512">
+        <div class="itemTitle">19. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789551512">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789551692">
+        <div class="itemTitle">18. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789551692">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789551872">
+        <div class="itemTitle">17. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789551872">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552052">
+        <div class="itemTitle">16. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552052">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552232">
+        <div class="itemTitle">15. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552232">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552412">
+        <div class="itemTitle">14. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552412">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552592">
+        <div class="itemTitle">13. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552592">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552772">
+        <div class="itemTitle">12. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552772">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789552952">
+        <div class="itemTitle">11. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789552952">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789553132">
+        <div class="itemTitle">10. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789553132">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789553312">
+        <div class="itemTitle">9. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789553312">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789553492">
+        <div class="itemTitle">8. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789553492">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789553672">
+        <div class="itemTitle">7. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789553672">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789553852">
+        <div class="itemTitle">6. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789553852">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789554032">
+        <div class="itemTitle">5. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789554032">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789554212">
+        <div class="itemTitle">4. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789554212">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789554392">
+        <div class="itemTitle">3. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789554392">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789554572">
+        <div class="itemTitle">2. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789554572">
+            </div>
+        </div>
+    </div>
+    <div class="itemDisplayDescription item1789554752">
+        <div class="itemTitle">1. <b>Вита-порошок стойкости</b></div>
+        <div class="itemBody">
+            <div class="itemBodyBlock itemBodyImage">
+                <img src="./vita_ankr(1).png" alt="" class="itemImage">
+            </div>
+            <div class="itemBodyBlock itemBodyWide itemBodyAlignCenter">
+                    Задание в очереди<br>
+                    <span><b>3</b> мин. <b>0</b> сек.</span><br>
+                    <input class="invbutt actionControl" type="button" value="Отменить" data-action="workers.stopWork" data-id="1789554752">
+            </div>
+        </div>
+    </div>
+</div></div>
+                    <div class="tab tab-converter" style="display: none;"></div>
+        </div>
+    </div>
+
+                </div>
+            </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-3d-ereality mCSB_scrollTools_vertical mCSB_scrollTools_onDrag_expand" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 46px; top: 0px; display: block; max-height: 150px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+        </div>
+        <div style="position:absolute;right:20px;top:64px;width:168px">
+            <div style="position:absolute;left:10px;right:10px;">
+                <div style="position:absolute;bottom: 20px;text-align:center;width:100%;">
+                    
+    <div id="guildhallAccount" style="display: none;" class="textM">
+    <span class="reputation"><b>10000</b>/10000</span>
+</div>
+
+                </div>
+            </div>
+            <div id="td_npc" style="padding: 20px 0 0 7px;"></div>
+                
+    <div id="workPoints" style="cursor: pointer;" class="textM"><div><span>239</span></div></div>
+    <table class="proAurAdv" cellpadding="2" cellspacing="2" width="160" border="0" style="display: none;">
+        <tbody><tr>
+            <td><a id="clan_gmirka" class="aur" href="javascript:top.core.modeSwitch('hero', 'mirka=1')">&nbsp;</a></td>
+            <td valign="middle"><a href="javascript:top.core.modeSwitch('hero', 'mirka=1')" style="color: #666">Ускорить рост профессии</a></td>
+        </tr>
+    </tbody></table>
+
+        </div>
+        </div>
+    
+</div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                NPCData = [];
+                hide_picture = 0;
+                var guildhallPlace = new _guildhallPlace('pguild-19');guildhallPlace.init();            });
+        </script>
+    
+<script>top.user.place2 = 30;top.user.setMoney();top.user.bot = 0;top.user.nowplace = "pguild-19";top.questNPC.resetCarousel();</script><div id="NPC-menu-wrapper" style="position: absolute; z-index: 16; left: 100px; top: 130px; display: none;"><div id="NPC-menu" data-jcarousel="true"><ul class="jcarousel-skin-tango" style="left: 0px; top: 0px;"></ul></div><a href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" class="jcarousel-control-prev" data-jcarouselcontrol="true" style="display: none;"></a><a href="https://www.ereality.ru/map.php?js=modeSwitch&amp;time=1789551009581#" class="jcarousel-control-next" data-jcarouselcontrol="true" style="display: none;"></a></div><div id="tooltip" style="display: none; left: 1009px; top: 256px;"><h3>Витализ</h3><div class="body" style="display: none;"></div><div class="url" style="display: none;"></div></div></body></html>
